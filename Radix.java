@@ -1,10 +1,12 @@
 public class Radix{
   public static void radixsort(int[] data){
-    MyLinkedList() l = new MyLinkedList();
     int digits=getLongest(data);
+    LinkedList()[] nums = new LinkedList()[digits];
     digits=10*digits-1;
-    for(int i=0;i<data.length;i++){
-      add(data[i]);
+    for(int i=0;i<nums.length;i++){
+      LinkedList() l = new LinkedList();
+      nums[i]=l;
+      l.add(data[i]);
       l.get(i).setTal=data[i]%digits;
     }
 

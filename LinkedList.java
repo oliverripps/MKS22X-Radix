@@ -1,8 +1,8 @@
-public class MyLinkedList{
+public class LinkedList{
 private int length;
 private Node start,end;
 
-public MyLinkedList(){
+public LinkedList(){
   start= null;
   end= null;
   length=0;
