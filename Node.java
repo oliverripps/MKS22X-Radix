@@ -1,10 +1,11 @@
 public class Node{
- private int data;
+ private int data,tal;
  private Node next,prev;
 
- public Node(Node referencefrom, int num,Node referenceto){
+ public Node(Node referencefrom, int num,int t,Node referenceto){
    data=num;
    next=referenceto;
+   tal=t;
    prev=referencefrom;
  }
  public Node next(){
@@ -31,4 +32,13 @@ public class Node{
  public String toString(){
    return "" + data;
  }
+ public Integer getTal(){
+   return tal;
+ }
+ public Integer setTal(Integer i){
+   Integer olddata=data;//remembering old data
+   tal=i;//setting new
+   return olddata;//returning the old data
+ }
+
 }

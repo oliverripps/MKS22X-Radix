@@ -10,14 +10,14 @@ public MyLinkedList(){
 
 public boolean add(int value){
   if(length!=0){//if there is a list
-    Node newend = new Node(end,value,null);//setting a new end
+    Node newend = new Node(end,value,0,null);//setting a new end
     end.setNext(newend);//setting the old end to direct to the new end
     end=newend;
     length++;//increasing the length by one
     return true;
 }
   else{//if there is no list
-    end=new Node(null,value,null);//create one node as end
+    end=new Node(null,value,0,null);//create one node as end
     start=end;//node is also the start
     length++;
     return true;
