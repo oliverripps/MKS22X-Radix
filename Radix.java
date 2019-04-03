@@ -1,6 +1,11 @@
 public class Radix{
   public static void radixsort(int[] data){
+    if(data.length<=1){
+      return;
+    }
+
     int digits=getLongest(data);
+    @SuppressWarnings("unchecked")
     LinkedList()[] nums = new LinkedList()[digits];
     digits=10*digits-1;
     for(int i=0;i<nums.length;i++){
@@ -23,7 +28,7 @@ public class Radix{
     }
     return i;
   }
-  
+
   private static int getLongest(int[] data){
     int longest=0
     for(int i=0;i<data.length;i++){
