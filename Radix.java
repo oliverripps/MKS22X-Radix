@@ -13,16 +13,25 @@ public class Radix{
 
   }
 
+
+  private static int digitsIn(int num){
+    num=Math.abs(num);
+    int i=0;
+    while(num>0){
+      num=num/10;
+      i++
+    }
+    return i;
+  }
+  
   private static int getLongest(int[] data){
     int longest=0
-    int str;
     for(int i=0;i<data.length;i++){
-      str=data[i]+""
-      if(str.length()>longest){
-        longest=str.length;
+      if(Math.abs(data[i])>=longest){
+        longest=Math.abs(data[i]);
       }
     }
-    return longest;
+    return digitsIn(longest);
   }
 
 }
