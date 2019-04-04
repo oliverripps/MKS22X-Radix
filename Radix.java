@@ -11,7 +11,7 @@ public class Radix{
       buckets[i] = new LinkedList<Integer>();
     }
 
-    boolean done=false;
+    //boolean done=false;
     MyLinkedList<Integer> nums = new MyLinkedList<Integer>();
 
     for(int i=0;i<digits;i++){
@@ -27,7 +27,19 @@ public class Radix{
           }
         }
       }
-      else{}
+      else{
+        while(nums.size()>0){
+          int num=nums.removeFront();
+          int index=Math.abs((int)(num/(Math.pow(10, i)))% 10);
+          if(num>= 0){
+            buckets[index+10].add(num);
+          }
+          else{
+            buckets[9 - idx].add(num);
+          }
+        }
+      }
+      
       /*LinkedList() l = new LinkedList();
       nums[i]=l;
       l.add(data[i]);
