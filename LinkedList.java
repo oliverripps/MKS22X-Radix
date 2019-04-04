@@ -1,4 +1,4 @@
-public class LinkedList{
+public class LinkedList<E>{
 private int length;
 private Node start,end;
 
@@ -10,14 +10,14 @@ public LinkedList(){
 
 public boolean add(int value){
   if(length!=0){//if there is a list
-    Node newend = new Node(end,value,0,null);//setting a new end
+    Node newend = new Node(end,value,null);//setting a new end
     end.setNext(newend);//setting the old end to direct to the new end
     end=newend;
     length++;//increasing the length by one
     return true;
 }
   else{//if there is no list
-    end=new Node(null,value,0,null);//create one node as end
+    end=new Node(null,value,null);//create one node as end
     start=end;//node is also the start
     length++;
     return true;
@@ -147,6 +147,17 @@ public void add(int index, Integer value){
       return true;
     }
   }
+  public Integer removeFront(){
+      Integer temp = start.getData();
+      if(size() == 1){//if only one Node in list
+        start = null;//start is null
+        return temp;
+      }
+      start = getNthNode(1);//Node at index 1 is now the start
+      start.setPrev(null);//no Nodes before the start
+      length--;//decrease length by 1
+      return temp;
+    }
 
   public void extend(LinkedList other){
        if(this.length==0){//if the original length is 0
