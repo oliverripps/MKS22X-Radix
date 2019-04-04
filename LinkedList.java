@@ -148,6 +148,9 @@ public void add(int index, Integer value){
     }
   }
   public Integer removeFront(){
+    /*if(start == null){
+      throw new NullPointerException();
+    }*/
       Integer temp = start.getData();
       if(size() == 1){//if only one Node in list
         start = null;//start is null
