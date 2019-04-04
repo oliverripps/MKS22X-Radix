@@ -12,14 +12,26 @@ public class Radix{
     }
 
     boolean done=false;
-    int index=1;
     MyLinkedList<Integer> nums = new MyLinkedList<Integer>();
 
     for(int i=0;i<digits;i++){
-      LinkedList() l = new LinkedList();
+      if(i==0){
+        for(int l=0;l<data.length;l++){
+          int curr=data[l];
+          int index=Math.abs((int)(curr/(Math.pow(10,i)))% 10);
+          if(curr>=0){
+            buckets[index+10].add(curr);
+          }
+          else{
+            buckets[9-index].add(temp);
+          }
+        }
+      }
+      else{}
+      /*LinkedList() l = new LinkedList();
       nums[i]=l;
       l.add(data[i]);
-      l.get(i).setTal=data[i]%digits;
+      l.get(i).setTal=data[i]%digits;*/
     }
 
 
