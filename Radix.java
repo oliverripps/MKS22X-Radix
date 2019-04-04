@@ -3,12 +3,19 @@ public class Radix{
     if(data.length<=1){
       return;
     }
-
     int digits=getLongest(data);
+
     @SuppressWarnings("unchecked")
-    LinkedList()[] nums = new LinkedList()[digits];
-    digits=10*digits-1;
-    for(int i=0;i<nums.length;i++){
+    LinkedList<Integer>[] buckets = new LinkedList[20];
+    for (int i = 0; i < buckets.length; i++) {
+      buckets[i] = new LinkedList<Integer>();
+    }
+
+    boolean done=false;
+    int index=1;
+    MyLinkedList<Integer> nums = new MyLinkedList<Integer>();
+
+    for(int i=0;i<digits;i++){
       LinkedList() l = new LinkedList();
       nums[i]=l;
       l.add(data[i]);
