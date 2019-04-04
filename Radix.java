@@ -29,6 +29,7 @@ public class Radix{
           }
         }
       }
+      
       else{
         while(nums.size()>0){
           int num=nums.removeFront();
