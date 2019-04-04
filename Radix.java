@@ -12,7 +12,7 @@ public class Radix{
     }
 
     //boolean done=false;
-    MyLinkedList<Integer> nums = new MyLinkedList<Integer>();
+    LinkedList<Integer> nums = new LinkedList<Integer>();
 
     for(int i=0;i<digits;i++){
       if(i==0){
@@ -23,7 +23,7 @@ public class Radix{
             buckets[index+10].add(curr);
           }
           else{
-            buckets[9-index].add(temp);
+            buckets[9-index].add(curr);
           }
         }
       }
@@ -35,7 +35,7 @@ public class Radix{
             buckets[index+10].add(num);
           }
           else{
-            buckets[9 - idx].add(num);
+            buckets[9 - index].add(num);
           }
         }
       }
@@ -55,13 +55,13 @@ public class Radix{
     int i=0;
     while(num>0){
       num=num/10;
-      i++
+      i++;
     }
     return i;
   }
 
   private static int getLongest(int[] data){
-    int longest=0
+    int longest=0;
     for(int i=0;i<data.length;i++){
       if(Math.abs(data[i])>=longest){
         longest=Math.abs(data[i]);
@@ -77,7 +77,6 @@ public class Radix{
           for(int size = 31250; size < 1000001; size*=2){
             long qtime=0;
             long btime=0;
-            //average of 5 sorts.
             for(int trial = 0 ; trial <=5; trial++){
               int []data1 = new int[size];
               int []data2 = new int[size];

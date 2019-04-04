@@ -148,7 +148,7 @@ public void add(int index, Integer value){
     }
   }
 
-  public void extend(MyLinkedList other){
+  public void extend(LinkedList other){
        if(this.length==0){//if the original length is 0
          for(int i=0;other.length!=0;i++){//loop through other and just add on
            this.add(i,other.getNthNode(i).getData());
